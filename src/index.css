@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: "Roboto",Arial, !important;
+  /* background-image: url("D:\React_Weather_Project\weather\public\icons\peakpx.jpg"); */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #454242; */
+  /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(66, 16, 16)); */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
