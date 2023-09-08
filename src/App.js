@@ -9,7 +9,7 @@ import {
   extendTheme,
   CSSReset,
   Flex,
-  useBreakpointValue, // Import useBreakpointValue
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import CurrentWeather from './components/current-weather/current-weather';
 import Search from './components/search/search';
@@ -58,7 +58,7 @@ function App() {
         </Box>
 
         <Container maxW="100%">
-          <Search onSearchChange={handleOnSearchChange} mb={4} /> {/* Add margin below the Search component */}
+          <Search onSearchChange={handleOnSearchChange} mb={4} />
           <Flex
             flexDirection={{ base: 'column', md: 'row' }}
             justifyContent="space-between"
@@ -67,16 +67,16 @@ function App() {
           >
             {currentWeather && (
               <Box
-                width={{ base: '100%', md: '62.5%' }} // Adjust width based on content
-                mt={12}
+                width={{ base: '100%', md: '62.5%' }}
+                mt={{ base: 4, md: 12 }} // Adjust margin based on screen size
               >
                 <CurrentWeather data={currentWeather} />
               </Box>
             )}
             {forecast && (
               <Box
-                width={{ base: '100%', md: 'auto' }} // Adjust width based on content
-                mt={forecastMargin} // Set dynamic margin based on screen size
+                width={{ base: '100%', md: 'auto' }}
+                mt={forecastMargin}
               >
                 <Forecast data={forecast} />
               </Box>

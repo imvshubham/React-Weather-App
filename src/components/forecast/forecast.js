@@ -28,7 +28,7 @@ const Forecast = ({ data }) => {
   );
 
   return (
-    <Box className="detail-box" marginLeft="10px">
+    <Box className="detail-box" marginLeft="1px">
       <Text
         fontSize="29px"
         fontWeight="bold"
