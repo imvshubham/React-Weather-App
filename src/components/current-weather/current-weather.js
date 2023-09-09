@@ -59,7 +59,7 @@ const CurrentWeather = ({ data }) => {
   const cityContainerStyle = {
     position: "absolute",
     top: "60%",
-    right: "50%",
+    right: "45%",
     transform: "translate(50%, -50%)",
   };
   const dateContainerStyle = {
