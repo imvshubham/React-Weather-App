@@ -47,7 +47,7 @@ function App() {
   // Calculate dynamic margin based on screen size
   const forecastMargin = useBreakpointValue({
     base: 4, // Margin for small screens
-    md: -5, // Margin for medium and larger screens
+    md: -4, // Margin for medium and larger screens
   });
 
   return (

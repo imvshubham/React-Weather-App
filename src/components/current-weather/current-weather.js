@@ -50,24 +50,33 @@ const CurrentWeather = ({ data }) => {
     right: "10px",
   };
 
-  const imageContainerStyle ={
+  const imageContainerStyle = {
     position: "absolute",
-    top:"10px",
+    top: "10px",
     right: "20px",
-  }
+  };
 
-  const cityContainerStyle ={
+  const cityContainerStyle = {
     position: "absolute",
-    top:"60%",
+    top: "60%",
     right: "50%",
-    transform: "translate(50%, -50%)"
-  }
+    transform: "translate(50%, -50%)",
+  };
   const dateContainerStyle = {
     position: "absolute",
-    top:"30%",
+    top: "30%",
     right: "45%",
-    transform: "translate(30%, -50%)"
-  }
+    transform: "translate(30%, -50%)",
+  };
+
+  const leftSectionStyle = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    marginRight: { base: "0", md: "4" },
+    position: "relative",
+    width: "100%",
+  };
 
   return (
     <Center>
@@ -76,10 +85,10 @@ const CurrentWeather = ({ data }) => {
         bg="rgba(0, 0, 0, 0.6)"
         borderRadius="7px"
         color="white"
-        margin="30px auto 0 auto"
+        margin={{ base: "55px auto 0 auto", md: "30px auto 0 auto" }}
         padding="20px"
         boxShadow="0px 2px 20px 2px rgba(0, 0, 0, 0.6)"
-        w={{ base: "100%", md: "100" }}
+        w={{ base: "100%", md: "100%" }}
         h="600px"
         position="relative"
       >
@@ -92,7 +101,7 @@ const CurrentWeather = ({ data }) => {
           <VStack
             spacing={20}
             alignItems="flex-start"
-            marginRight={{ base: "0", md: "4" }}
+            style={leftSectionStyle}
           >
             <Box w="100%" marginTop="40px">
               <Text fontWeight="bold" fontSize="xl" fontStyle="italic">
@@ -125,7 +134,7 @@ const CurrentWeather = ({ data }) => {
           </VStack>
           {/* adding date */}
           <HStack align="flex-start" spacing={4} style={dateContainerStyle}>
-            <Clock/>
+            <Clock />
           </HStack>
 
           {/* Button container */}
@@ -159,9 +168,10 @@ const CurrentWeather = ({ data }) => {
           <Spacer />
           {/* Image and Description Container */}
           <VStack align="flex-start" spacing={4} style={imageContainerStyle}>
-            <Box position="relative"
-            textAlign="right"
-            top="0px"
+            <Box
+              position="relative"
+              textAlign="right"
+              top="0px"
             >
               <Flex flexDirection="column" alignItems="center">
                 <Image
@@ -172,12 +182,7 @@ const CurrentWeather = ({ data }) => {
                 />
               </Flex>
             </Box>
-            <Box
-              position="relative"
-              textAlign="right"
-              top="0"
-              right="0"
-            >
+            <Box position="relative" textAlign="right" top="0" right="0">
               <Text
                 className="weather-description"
                 fontSize={{ base: "sm", md: "md" }}
@@ -197,7 +202,9 @@ const CurrentWeather = ({ data }) => {
             </Box>
 
             {/* City Container */}
-            <Text className="city" fontSize={{base:"4xl",md:"5xl"}}>{data.city}</Text>
+            <Text className="city" fontSize={{ base: "2xl", md: "5xl" }}>
+              {data.city}
+            </Text>
           </VStack>
         </Flex>
       </Box>
